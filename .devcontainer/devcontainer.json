@@ -10,11 +10,14 @@
                 "posit.air-vscode",
                 "quarto.quarto"
             ],
+            
             "settings": {
-                "r.editor.formatOnSave": true,
-                "r.editor.defaultFromatter": "posit.air-vscode"
+                    "[r]": {
+                        "editor.formatOnSave": true,
+                        "editor.defaultFormatter": "Posit.air-vscode"
+                    }
+                }   
             }
-        }
-    },
-    "postCreateCommand": "R -q -e 'renv::install()' && R -q -e 'renv::init()' && R -q -e install.packages('languageserver', repos='https://p3m.dev/cran/__linux__/noble/latest') "
+        },
+    "postCreateCommand": "R -q -e 'renv::install()' && R -q -e 'renv::init()' && R -q -e install.packages('languageserver', repos='https://p3m.dev/cran/__linux__/noble/latest')"
 }

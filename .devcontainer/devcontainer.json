@@ -15,6 +15,5 @@
             }
         }
     },
-    "postCreateCommand": "R -q -e 'renv::install()'",
-    "remoteUser": "vscode"
+    "postCreateCommand": "R -q -e 'renv::install()'"
 }

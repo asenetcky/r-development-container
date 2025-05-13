@@ -19,5 +19,5 @@
                 }   
             }
         },
-    "postCreateCommand": "R -q -e 'renv::install()' && R -q -e 'renv::init()' && R -q -e install.packages('languageserver', repos='https://p3m.dev/cran/__linux__/noble/latest')"
+    "postCreateCommand": "R -q -e 'renv::install()' && R -q -e 'renv::init()' && R -q -e install.packages('languageserver', repos='https://p3m.dev/cran/__linux__/noble/latest') && bash /.devcontainer/latest-quarto-cli.sh"
 }

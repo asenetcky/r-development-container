@@ -19,5 +19,10 @@
                 }   
             }
         },
-    "postCreateCommand": "R -q -e 'renv::install()' && R -q -e 'renv::init()' && R -q -e install.packages('languageserver', repos='https://p3m.dev/cran/__linux__/noble/latest')"
+    "postCreateCommand": {
+        "renv-install": ["R", "-q", "-e", "'renv::install()'"],
+        "renv-init": ["R", "-q", "-e", "'renv::init()'"],
+        "languageserver":  ["R", "-q", "-e", "renv::install('languageserver', repos='https://p3m.dev/cran/__linux__/noble/latest')"],
+        "quarto": ["sudo", "bash", ".devcontainer/quarto-1.7.31-cli.sh"]
+    }
 }

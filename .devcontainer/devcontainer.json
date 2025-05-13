@@ -4,5 +4,17 @@
     "features": {
         "ghcr.io/rocker-org/devcontainer-features/renv-cache:latest": {}
     },
-    "postCreateCommand": "R -q -e 'renv::install()'"
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "posit.air-vscode"
+            ],
+            "settings": {
+                "r.editor.formatOnSave": true,
+                "r.editor.defaultFromatter": "posit.air-vscode"
+            }
+        }
+    },
+    "postCreateCommand": "R -q -e 'renv::install()'",
+    "remoteUser": "vscode"
 }

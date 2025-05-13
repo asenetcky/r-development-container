@@ -15,5 +15,5 @@
             }
         }
     },
-    "postCreateCommand": "R -q -e 'renv::install()'"
+    "postCreateCommand": "R -q -e 'renv::install()' && R -q -e 'renv::init()'"
 }

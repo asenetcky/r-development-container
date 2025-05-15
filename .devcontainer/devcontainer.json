@@ -11,13 +11,18 @@
                 "posit.air-vscode",
                 "quarto.quarto"
             ],
-            
             "settings": {
                     "[r]": {
                         "editor.formatOnSave": true,
                         "editor.defaultFormatter": "Posit.air-vscode"
                     }
                 }   
+            },
+        "codespaces": {
+            "openFiles": [
+                "README.md",
+                "R/main.R"
+                ]
             }
         },
     "postCreateCommand": {
